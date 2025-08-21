@@ -1,0 +1,7 @@
+.vscode
+.idea
+.venevv
+__pycache__
+DATA/Brain_DATA/DLG_DATA/__pycache__
+FUNCTION/__pycache__
+HEAD/__pycache__
