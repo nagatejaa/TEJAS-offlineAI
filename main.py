@@ -11,20 +11,20 @@ def tejas():
     
     # ─── Phase 1: Wait for wake word ───
     while True:
-        text = input("Enter your command: ").lower()  # replace with listen()
-        
-        if "tejas" in text:
+        text = listen()
+        print(f"Wake word check: {text}")
+        if "tejas" in text.lower():
             time.sleep(3)
             welcome()
             break   # wake word detected → exit loop
         else:
-            speak("Waiting for wake word")  # wrong word → keep waiting
+            speak("Waiting for wake word")
     
     # ─── Phase 2: Assistant active ───
 
     speak("I'm listening...")
     while True:
-        text = input("Enter your command: ").lower()
+        text = listen()
         
         if text in ["exit", "quit", "stop"]:
             speak("Shutting down. Goodbye!")
